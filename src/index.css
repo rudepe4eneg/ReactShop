@@ -17,6 +17,10 @@ body {
     margin: 50px auto;
 }
 
+header {
+    position: relative;
+}
+
 header .logo {
     font-weight: 600;
     font-size: 20px;
@@ -38,6 +42,30 @@ header ul.nav li:hover {
     opacity: 0.5;
 }
 
+header .shop-cart-button {
+    float: right;
+    cursor: pointer;
+    transition: opacity, transform 500ms ease;
+}
+
+header .shop-cart-button:hover,
+header .shop-cart-button.active {
+    color: #dc3d3d;
+    transform: scale(1.5);
+}
+
+header .shop-cart {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    width: 450px;
+    min-height: 100px;
+    background: #fafafa;
+    -webkit-box-shadow: 4px 5px 5px -7px #606060;
+    box-shadow: 4px 5px 5px -7px #606060;
+    z-index: 1000;
+}
+
 header .presentation {
     margin: 50px 0;
     background: url('../public/img/bg.jpg') no-repeat;
@@ -52,8 +80,8 @@ header .presentation {
 header .presentation::after {
     content: 'Товары для вашего дома';
     position: absolute;
-    top: 200px;
-    left: 300px;
+    top: 130px;
+    left: 110px;
     width: 300px;
     font-size: 40px;
     font-weight: 600;
@@ -63,8 +91,8 @@ header .presentation::after {
 header .presentation::before {
     content: 'по приемлемой цене';
     position: absolute;
-    top: 320px;
-    left: 300px;
+    top: 240px;
+    left: 110px;
     width: 300px;
     font-size: 15px;
     font-weight: 300;
